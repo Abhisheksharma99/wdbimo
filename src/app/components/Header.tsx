@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { Menu, X, Building } from 'lucide-react'
-import Link from 'next/link'
+import Link from 'next/link';
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
@@ -25,8 +25,8 @@ export default function Header() {
         </div>
         <nav className="hidden md:flex space-x-4">
           <Link href="#" className={`hover:text-amber-200 ${isScrolled ? 'font-semibold' : ''}`}>Home</Link>
+          <Link href="#aboutus" className={`hover:text-amber-200 ${isScrolled ? 'font-semibold' : ''}`}>About Us</Link>
           <Link href="#services" className={`hover:text-amber-200 ${isScrolled ? 'font-semibold' : ''}`}>Services</Link>
-          <Link href="#projects" className={`hover:text-amber-200 ${isScrolled ? 'font-semibold' : ''}`}>Projects</Link>
           <Link href="#clients" className={`hover:text-amber-200 ${isScrolled ? 'font-semibold' : ''}`}>Clients</Link>
           <Link href="#contact" className={`hover:text-amber-200 ${isScrolled ? 'font-semibold' : ''}`}>Contact</Link>
         </nav>

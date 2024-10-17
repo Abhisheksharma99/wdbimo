@@ -1,5 +1,5 @@
-import Link from 'next/link'
-import { Building, Mail, Phone, MapPin } from 'lucide-react'
+import Link from 'next/link';
+import { Building, Mail, Phone, MapPin } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -28,7 +28,7 @@ export default function Footer() {
             <ul className="space-y-2">
               <li className="flex items-center">
                 <Mail className="mr-2 h-5 w-5" />
-                <a href="mailto:info@wdbimo.com" className="hover:text-amber-400 transition-colors">info@wdbimo.com</a>
+                <a href="mailto:Wdbimoindia@gmail.com" className="hover:text-amber-400 transition-colors">info@wdbimo.com</a>
               </li>
               <li className="flex items-center">
                 <Phone className="mr-2 h-5 w-5" />
