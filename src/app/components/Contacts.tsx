@@ -9,14 +9,14 @@ export default function Contact() {
     message: ''
   })
 
-  const handleChange = (e) => {
+  const handleChange = (e: any) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
     })
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e:any) => {
     e.preventDefault()
     // Here you would typically send the form data to a server
     console.log('Form submitted:', formData)
@@ -62,7 +62,7 @@ export default function Contact() {
               onChange={handleChange}
               required
               className="w-full px-3 py-2 border border-gray-300 rounded-md"
-              rows="4"
+              rows={4}
             ></textarea>
           </div>
           <button type="submit" className="bg-green-500 text-white py-2 px-4 rounded-md hover:bg-green-600 transition duration-300">
