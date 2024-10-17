@@ -21,7 +21,7 @@ export default function Hero() {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="text-xl md:text-2xl mb-8"
         >
-          Innovative Construction Solutions for Agriculture anf farming
+          Innovative Construction Solutions for Agriculture and farming
           </motion.p>
           </div>
           </div>
