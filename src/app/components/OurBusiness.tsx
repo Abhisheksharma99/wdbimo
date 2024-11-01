@@ -35,7 +35,7 @@ export default function OurBusinesses() {
           transition={{ duration: 0.5 }}
           className="text-3xl md:text-4xl font-bold text-center mb-12 text-emerald-800"
         >
-          Our Businesses
+          Areas of Expertise
         </motion.h2>
 
         {/* Card Grid */}
