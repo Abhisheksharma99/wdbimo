@@ -1,43 +1,50 @@
-'use client'
+'use client';
 
-import { useState } from 'react'
-import { motion } from 'framer-motion'
-import { Send, User, Mail, MessageSquare } from 'lucide-react'
+import { useState } from 'react';
+import { motion } from 'framer-motion';
+import { Send, User, Mail, MessageSquare, Phone } from 'lucide-react';
+import emailjs from 'emailjs-com';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    message: ''
-  })
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [toastMessage, setToastMessage] = useState('')
+    message: '',
+    phone: '' // Added phone number field
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [toastMessage, setToastMessage] = useState('');
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
-    })
-  }
+    });
+  };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
-    setIsSubmitting(true)
+    e.preventDefault();
+    setIsSubmitting(true);
 
-    // Simulating an API call
-    await new Promise(resolve => setTimeout(resolve, 1500))
+    try {
+      const serviceId = 'service_7rxtcpo';
+      const templateId = 'template_kk8f8a7';
+      const publicKey = 'fPXN7jlAEk-Ufmf3a';
 
-    // Here you would typically send the form data to a server
-    console.log('Form submitted:', formData)
-    
-    setToastMessage("Thank you for your message. We'll get back to you soon.")
+      // Send the email using EmailJS
+      await emailjs.send(serviceId, templateId, formData, publicKey);
 
-    setFormData({ name: '', email: '', message: '' })
-    setIsSubmitting(false)
-
-    // Hide toast message after 5 seconds
-    setTimeout(() => setToastMessage(''), 5000)
-  }
+      setToastMessage("Thank you for your message. We'll get back to you soon.");
+      setFormData({ name: '', email: '', message: '', phone: '' }); // Reset phone field
+    } catch (error) {
+      console.error('Failed to send email:', error);
+      setToastMessage('Failed to send your message. Please try again later.');
+    } finally {
+      setIsSubmitting(false);
+      // Hide toast message after 5 seconds
+      setTimeout(() => setToastMessage(''), 5000);
+    }
+  };
 
   return (
     <section id="contact" className="py-20 bg-gradient-to-br from-emerald-50 to-amber-50">
@@ -90,6 +97,22 @@ export default function Contact() {
             </div>
           </div>
           <div>
+            <label htmlFor="phone" className="block mb-2 text-sm font-medium text-emerald-700">Phone</label>
+            <div className="relative">
+              <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 text-emerald-500" size={18} />
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                value={formData.phone}
+                onChange={handleChange}
+                required
+                className="w-full pl-10 pr-3 py-2 border border-emerald-300 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent"
+                placeholder="Your Phone Number"
+              />
+            </div>
+          </div>
+          <div>
             <label htmlFor="message" className="block mb-2 text-sm font-medium text-emerald-700">Message</label>
             <div className="relative">
               <MessageSquare className="absolute left-3 top-3 text-emerald-500" size={18} />
@@ -129,6 +152,7 @@ export default function Contact() {
             )}
           </button>
         </motion.form>
+        
         {toastMessage && (
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -139,7 +163,16 @@ export default function Contact() {
             {toastMessage}
           </motion.div>
         )}
+
+        {/* Contact Information Section */}
+        <div className="mt-12 text-center">
+          <h3 className="text-xl font-semibold text-emerald-800">Get in Touch</h3>
+          <p className="text-md text-emerald-700">For further inquiries, you can reach us at:</p>
+          <p className="text-md text-emerald-600">Email: <a href="mailto:wdbimoindia@gmail.com" className="underline">wdbimoindia@gmail.com</a></p>
+          <p className="text-md text-emerald-600">Phone: <a href="tel:+919852721697" className="underline">+919852721697</a></p>
+          <p className="text-md text-emerald-600">Phone: <a href="tel:+919871838391" className="underline">+919871838391</a></p>
+        </div>
       </div>
     </section>
-  )
+  );
 }

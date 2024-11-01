@@ -6,8 +6,8 @@ import wdbimoDesign from '../assets/wdbimo design.jpg'
 
 export default function AboutUs() {
   return (
-    <section 
-      id="aboutus" 
+    <section
+      id="aboutus"
       className="py-20 bg-gradient-to-br from-emerald-50 to-amber-50 overflow-hidden"
     >
       <div className="container mx-auto px-4">
@@ -24,34 +24,30 @@ export default function AboutUs() {
         {/* Content Row */}
         <div className="flex flex-col md:flex-row items-center gap-10 ms-8">
           {/* Left Column - Text Content */}
-          <motion.div 
-            initial={{ opacity: 0, x: -50 }} 
-            animate={{ opacity: 1, x: 0 }} 
-            transition={{ duration: 0.6 }} 
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
             className="md:w-1/2"
           >
             <h3 className="text-2xl font-semibold mb-4 text-emerald-700">
               Welcome to Wdbimo: Nature of Business - Manufacturing of Infrastructure
             </h3>
             <p className="text-lg text-gray-700 leading-relaxed">
-              At Wdbimo, our commitment to excellence extends beyond our individual businesses. 
-              We believe in giving back to the communities we serve, supporting local initiatives 
-              and charities to make a positive impact where it matters most. With a strong foundation 
-              built on integrity, quality, and community, Wdbimo continues to grow and thrive, setting 
-              new standards of excellence in everything we do.
+              Wdbimo was established in 2019 at the faridabad hariyana location.
+              We are leading in engineering, fabrication, infrastructure, agriculture and project management for a deverse range of industries to compile a total pre-engineered building solution. Beside pre-engineered building, WDBIMO has the   manufacturing facilities for industries logistics, construction, automobiles, railways, Materials handling, hospital,school.
             </p>
           </motion.div>
-
           {/* Right Column - Image */}
-          <motion.div 
-            initial={{ opacity: 0, x: 50 }} 
-            animate={{ opacity: 1, x: 0 }} 
-            transition={{ duration: 0.6 }} 
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
             className="md:w-1/2"
           >
-            <Image 
+            <Image
               src={wdbimoDesign}
-              alt="Design process" 
+              alt="Design process"
               width={500}
               height={200}
               className="rounded-lg shadow-lg"

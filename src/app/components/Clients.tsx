@@ -2,19 +2,14 @@
 
 import { useState, useEffect, useRef } from 'react'
 import { motion } from 'framer-motion'
-import { Milk, Factory, Cookie, Building2, Wheat, Beer, Egg, Recycle, Leaf, Utensils } from 'lucide-react'
+import { Milk, Factory, Cookie, Building2, HardHat } from 'lucide-react'
 
 const clients = [
   { name: "Amul Milk", Icon: Milk },
   { name: "Bankasta Co-operative", Icon: Factory },
   { name: "KM Sugar Mill Ayodhya", Icon: Cookie },
   { name: "Oriental Infrastructure", Icon: Building2 },
-  { name: "Agri Solutions", Icon: Wheat },
-  { name: "Craft Breweries", Icon: Beer },
-  { name: "Poultry Farms Inc.", Icon: Egg },
-  { name: "EcoWaste Management", Icon: Recycle },
-  { name: "Green Gaushala", Icon: Leaf },
-  { name: "Modern Meat Processing", Icon: Utensils }
+  { name: "Sahyog Industries", Icon: HardHat }
 ]
 
 export default function Clients() {
