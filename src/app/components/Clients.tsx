@@ -8,8 +8,7 @@ const clients = [
   { name: "Amul Milk", Icon: Milk },
   { name: "Bankasta Co-operative", Icon: Factory },
   { name: "KM Sugar Mill Ayodhya", Icon: Cookie },
-  { name: "Oriental Infrastructure", Icon: Building2 },
-  { name: "Sahyog Industries", Icon: HardHat }
+  { name: "Oriental Infrastructure", Icon: Building2 }
 ]
 
 export default function Clients() {

@@ -30,9 +30,6 @@ export default function AboutUs() {
             transition={{ duration: 0.6 }}
             className="md:w-1/2"
           >
-            <h3 className="text-2xl font-semibold mb-4 text-emerald-700">
-              Welcome to Wdbimo: Nature of Business - Manufacturing of Infrastructure
-            </h3>
             <p className="text-lg text-gray-700 leading-relaxed">
               Wdbimo was established in 2019 at the faridabad hariyana location.
               We are leading in engineering, fabrication, infrastructure, agriculture and project management for a deverse range of industries to compile a total pre-engineered building solution. Beside pre-engineered building, WDBIMO has the   manufacturing facilities for industries logistics, construction, automobiles, railways, Materials handling, hospital,school.
