@@ -14,9 +14,11 @@ export default function Footer() {
             </h3>
             <p className="text-dark">Building innovative structures for all</p>
           </div>
-          <div className="w-full md:w-1/3 mb-6 md:mb-0">
+
+          {/* Quick Links Section */}
+          <div className="w-full md:w-1/3 mb-6 md:mb-0 flex flex-col items-center">
             <h3 className="text-xl font-bold mb-2">Quick Links</h3>
-            <ul className="space-y-2">
+            <ul className="space-y-2 text-center">
               <li><Link href="#" className="hover:text-amber-400 transition-colors">Home</Link></li>
               <li><Link href="#services" className="hover:text-amber-400 transition-colors">Services</Link></li>
               <li><Link href="#projects" className="hover:text-amber-400 transition-colors">Projects</Link></li>
@@ -24,9 +26,11 @@ export default function Footer() {
               <li><Link href="#contact" className="hover:text-amber-400 transition-colors">Contact</Link></li>
             </ul>
           </div>
-          <div className="w-full md:w-1/3">
+
+          {/* Contact Us Section */}
+          <div className="w-full md:w-1/3 flex flex-col items-center">
             <h3 className="text-xl font-bold mb-2">Contact Us</h3>
-            <ul className="space-y-2">
+            <ul className="space-y-2 text-center">
               <li className="flex items-center">
                 <Mail className="mr-2 h-5 w-5" />
                 <a href="mailto:Wdbimoindia@gmail.com" className="hover:text-amber-400 transition-colors">info@wdbimo.com</a>
@@ -62,5 +66,5 @@ export default function Footer() {
         </div>
       </div>
     </footer>
-  )
+  );
 }
